@@ -6,7 +6,7 @@ const FlexBetween = styled(Box)({
     alignItems: "center",
     paddingLeft: "2rem",
     paddingRight: "2rem",
-    backgroundColor: 'red'
+    // backgroundColor: 'red'
 })
 
 export default FlexBetween;
