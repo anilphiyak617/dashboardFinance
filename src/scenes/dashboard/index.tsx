@@ -1,5 +1,9 @@
 import DashBoardBox from '@/components/DashboardBox'
 import { Box, useMediaQuery, useTheme } from '@mui/material'
+import Row1 from './Row1'
+import Row2 from './Row2'
+import Row3 from './Row3'
+import { useGetKpisQuery } from '@/state/api'
 
 type Props = {}
 
@@ -51,6 +55,12 @@ const gridTemplateSmallScreens = `
 
 const DashBoard = (props: Props) => {
 
+    // console.log("status", status)
+    // console.log("error", error)
+    // console.log("DATA", data)
+    // console.log("data:", data.slice(0, 10))
+
+
     const isAboveMediumScreeens = useMediaQuery("(min-width: 1200px)")
 
     const { palette } = useTheme();
@@ -70,18 +80,9 @@ const DashBoard = (props: Props) => {
                 gridTemplateAreas: gridTemplateSmallScreens
             }}>
 
-            <DashBoardBox gridArea={'a'} ></DashBoardBox>
-            <DashBoardBox gridArea={'b'} ></DashBoardBox>
-            <DashBoardBox gridArea={'c'} ></DashBoardBox>
-            <DashBoardBox gridArea={'d'} ></DashBoardBox>
-            <DashBoardBox gridArea={'e'} ></DashBoardBox>
-            <DashBoardBox gridArea={'f'} ></DashBoardBox>
-            <DashBoardBox gridArea={'g'} ></DashBoardBox>
-            <DashBoardBox gridArea={'h'} ></DashBoardBox>
-            <DashBoardBox gridArea={'i'} ></DashBoardBox>
-            <DashBoardBox gridArea={'j'} ></DashBoardBox>
-
-            {/* <div style={{ color: "red" }}>this is div</div> */}
+            <Row1 />
+            <Row2 />
+            <Row3 />
         </Box>
 
     )
