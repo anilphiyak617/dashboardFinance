@@ -32,3 +32,18 @@ export interface ExpensesByCategory {
   services: number;
   supplies: number;
 }
+
+
+/**
+ * Represents the response from the API endpoint for retrieving a list of products.
+ */
+export interface GetProductsResponse {
+    _id: string;
+    price: number;
+    expense: number;
+    transactions: string[];
+    __v: number;
+    createdAt: string;
+    updatedAt: string;
+    id: string;
+}

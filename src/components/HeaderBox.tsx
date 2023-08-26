@@ -14,7 +14,9 @@ const HeaderBox = ({ icon, title, subTitle, sideText }: Props) => {
     return (
         <FlexBetween color={palette.grey[400]} m={"1rem 1rem 0rem 1rem"} >
             <FlexBetween >
-                <Box width={"100%"} >
+                <Box width={"100%"}
+                // sx={{ backgroundColor: "red" }}
+                >
                     <Typography variant='h4' >{title}</Typography>
                     <Typography variant='h6'>{subTitle}</Typography>
                 </Box>
