@@ -6,9 +6,7 @@ import { Box, Typography, useTheme } from "@mui/material";
 import { useMemo } from "react";
 import { CartesianGrid, Cell, Legend, Line, LineChart, Pie, PieChart, ResponsiveContainer, Scatter, ScatterChart, Tooltip, XAxis, YAxis, ZAxis } from "recharts";
 
-type Props = {}
-
-const Row2 = (props: Props) => {
+const Row2 = () => {
 
     const { palette } = useTheme();
     const { data: productsData } = useGetProductsQuery();
@@ -131,7 +129,7 @@ const Row2 = (props: Props) => {
                             paddingAngle={5}
                             fill={palette.primary.dark}
                         >
-                            {pieData.map((entry, index) => (
+                            {pieData.map((_, index) => (
                                 <Cell key={`cell-${index}`} fill={pieColors[index % pieColors.length]} />
                             ))}
 

@@ -2,7 +2,7 @@ import DashBoardBox from '@/components/DashboardBox';
 import FlexBetween from '@/components/FlexBetween';
 import { useGetKpisQuery } from '@/state/api';
 import { Box, Button, Typography, useMediaQuery, useTheme } from '@mui/material'
-import React, { useMemo, useState } from 'react'
+import { useMemo, useState } from 'react'
 import { CartesianGrid, Label, Legend, Line, LineChart, ResponsiveContainer, Tooltip, XAxis, YAxis } from 'recharts';
 import { DataPoint, linear } from 'regression';
 
