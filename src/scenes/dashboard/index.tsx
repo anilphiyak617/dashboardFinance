@@ -56,15 +56,15 @@ const gridTemplateSmallScreens = `
 
 const DashBoard = (props: Props) => {
 
+    const { palette, breakpoints } = useTheme();
     // console.log("status", status)
     // console.log("error", error)
     // console.log("DATA", data)
     // console.log("data:", data.slice(0, 10))
 
+    const isAboveMediumScreeens = useMediaQuery(breakpoints.up('lg'))
+    // const isAboveMediumScreeens = useMediaQuery("(min-width: 1200px)
 
-    const isAboveMediumScreeens = useMediaQuery("(min-width: 1200px)")
-
-    const { palette } = useTheme();
     return (
         <Box
             width={" 100%"}
