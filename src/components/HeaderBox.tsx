@@ -12,7 +12,7 @@ type Props = {
 const HeaderBox = ({ icon, title, subTitle, sideText }: Props) => {
     const { palette } = useTheme()
     return (
-        <FlexBetween color={palette.grey[400]} m={"1rem 1rem 0rem 1rem"} >
+    <FlexBetween color={palette.grey[400]} m={"1rem 1rem 0rem 1rem"}  >
             <FlexBetween >
                 <Box width={"100%"}
                 // sx={{ backgroundColor: "red" }}

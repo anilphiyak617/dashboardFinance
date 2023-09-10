@@ -48,6 +48,7 @@ const gridTemplateSmallScreens = `
 "h"
 "h"
 "i"
+"i"
 "j"
 "j"
 `

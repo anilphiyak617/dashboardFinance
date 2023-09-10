@@ -38,12 +38,29 @@ export interface ExpensesByCategory {
  * Represents the response from the API endpoint for retrieving a list of products.
  */
 export interface GetProductsResponse {
-    _id: string;
-    price: number;
-    expense: number;
-    transactions: string[];
-    __v: number;
-    createdAt: string;
-    updatedAt: string;
-    id: string;
+  _id: string;
+  price: number;
+  expense: number;
+  transactions: string[];
+  __v: number;
+  createdAt: string;
+  updatedAt: string;
+  id: string;
 }
+
+/**
+ * Represents the response from the API endpoint for retrieving a Transaction Data.
+ */
+export interface GetTransactionResponse {
+  _id: string;
+  buyer: string;
+  amount: number;
+  productIds: string[];
+  __v: number;
+  createdAt: string;
+  updatedAt: string;
+  id: string;
+}
+
+
+
