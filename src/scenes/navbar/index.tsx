@@ -2,9 +2,8 @@ import FlexBetween from '@/components/FlexBetween';
 import { Box, Typography, useTheme } from '@mui/material';
 import PixIcon from '@mui/icons-material/Pix';
 import { NavLink } from 'react-router-dom';
-type Props = {}
 
-const Navbar = (props: Props) => {
+const Navbar = () => {
 
     const { palette } = useTheme();
     return (

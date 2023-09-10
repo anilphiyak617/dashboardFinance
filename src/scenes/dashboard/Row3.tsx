@@ -6,10 +6,8 @@ import { useGetKpisQuery, useGetProductsQuery, useGetTransactionsQuery } from '@
 import { useMemo } from 'react'
 import FlexBetween from '@/components/FlexBetween'
 import { Cell, Pie, PieChart } from 'recharts'
-type Props = {}
 
-const Row3 = (props: Props) => {
-
+const Row3 = () => {
     const { palette } = useTheme();
     const { data: kpisData } = useGetKpisQuery();
     const { data: productsData } = useGetProductsQuery();
@@ -179,7 +177,7 @@ const Row3 = (props: Props) => {
                                     paddingAngle={2}
                                     dataKey="value"
                                 >
-                                    {data.map((entry, index) => (
+                                    {data.map((_, index) => (
                                         <Cell key={`cell-${index}`} fill={pieColors[index]} />
                                     ))}
                                 </Pie>

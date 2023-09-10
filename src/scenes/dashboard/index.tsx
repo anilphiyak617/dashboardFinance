@@ -1,11 +1,8 @@
-import DashBoardBox from '@/components/DashboardBox'
 import { Box, useMediaQuery, useTheme } from '@mui/material'
 import Row1 from './Row1'
 import Row2 from './Row2'
 import Row3 from './Row3'
-import { useGetKpisQuery } from '@/state/api'
 
-type Props = {}
 
 
 const gridTemplateLargeScreens = `
@@ -54,17 +51,17 @@ const gridTemplateSmallScreens = `
 `
 
 
-const DashBoard = (props: Props) => {
+const DashBoard = () => {
 
+    const { breakpoints } = useTheme();
     // console.log("status", status)
     // console.log("error", error)
     // console.log("DATA", data)
     // console.log("data:", data.slice(0, 10))
 
+    const isAboveMediumScreeens = useMediaQuery(breakpoints.up('lg'))
+    // const isAboveMediumScreeens = useMediaQuery("(min-width: 1200px)
 
-    const isAboveMediumScreeens = useMediaQuery("(min-width: 1200px)")
-
-    const { palette } = useTheme();
     return (
         <Box
             width={" 100%"}
