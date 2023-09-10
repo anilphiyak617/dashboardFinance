@@ -1,17 +1,19 @@
 import FlexBetween from '@/components/FlexBetween';
 import { Box, Typography, useTheme } from '@mui/material';
 import PixIcon from '@mui/icons-material/Pix';
-import { Link } from 'react-router-dom';
-import { useState } from 'react';
+import { NavLink } from 'react-router-dom';
 type Props = {}
 
 const Navbar = (props: Props) => {
 
     const { palette } = useTheme();
-    const [selected, setSelected] = useState<string>("dashboard");
-
     return (
-        <FlexBetween mb={"0.25rem"} padding={"0.5rem 0rem"} color={palette.grey[300]}>
+        <FlexBetween
+            mb={"0.25rem"}
+            padding={"0.5rem 2rem"}
+            color={palette.grey[300]}
+        // position={"fixed"}
+        >
             {/* LEFT SIDE */}
             <FlexBetween gap="0.75rem">
                 <PixIcon sx={{ fontSize: "28px", }} />
@@ -27,34 +29,34 @@ const Navbar = (props: Props) => {
                         color: palette.primary[100]
                     }
                 }}>
-                    <Link
+                    <NavLink
                         to={"/"}
-                        onClick={() => setSelected("dashboard")}
-                        style={{
-                            color: selected === "dashboard" ? "inherit" : palette.grey[700],
-                            textDecoration: "inherit"
+                        style={({ isActive}) => {
+                            return {
+                                color: isActive ? "inherit" : palette.grey[700],
+                                textDecoration: "inherit"
+                            }
                         }}
-
                     >
                         dashboard
-                    </Link>
+                    </NavLink>
                 </Box>
                 <Box sx={{
                     "&:hover": {
                         color: palette.primary[100]
                     }
                 }}>
-                    <Link
+                    <NavLink
                         to={"/predictions"}
-                        onClick={() => setSelected("predictions")}
-                        style={{
-                            color: selected === "predictions" ? "inherit" : palette.grey[700],
-                            textDecoration: "inherit"
+                        style={({ isActive }) => {
+                            return {
+                                color: isActive ? "inherit" : palette.grey[700],
+                                textDecoration: "inherit"
+                            }
                         }}
-
                     >
                         predictions
-                    </Link>
+                    </NavLink>
                 </Box>
             </FlexBetween>
 

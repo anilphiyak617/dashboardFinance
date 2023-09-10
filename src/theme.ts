@@ -57,14 +57,15 @@ export const themeSettings = {
       main: tokens.secondary[500],
     },
     tertiary: {
-      ...tokens.tertiary  },
+      ...tokens.tertiary,
+    },
     grey: {
       ...tokens.grey,
       main: tokens.grey[500],
     },
     background: {
       default: tokens.background.main,
-      light: tokens.background.light,
+      paper: tokens.background.light,
     },
   },
   typography: {
@@ -102,4 +103,5 @@ export const themeSettings = {
       color: tokens.grey[700],
     },
   },
+
 };
