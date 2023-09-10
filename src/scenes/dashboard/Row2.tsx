@@ -4,7 +4,7 @@ import HeaderBox from "@/components/HeaderBox";
 import { useGetKpisQuery, useGetProductsQuery } from "@/state/api"
 import { Box, Typography, useTheme } from "@mui/material";
 import { useMemo } from "react";
-import { CartesianGrid, Cell, Legend, Line, LineChart, Pie, PieChart, ResponsiveContainer, Scatter, ScatterChart, Tooltip, XAxis, YAxis, ZAxis } from "recharts";
+import { CartesianGrid, Cell, Line, LineChart, Pie, PieChart, ResponsiveContainer, Scatter, ScatterChart, Tooltip, XAxis, YAxis, ZAxis } from "recharts";
 
 const Row2 = () => {
 
